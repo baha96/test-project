@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import DataTable from '@/components/DataTable.vue';
-import jsonData from './mock/res-second-task.json';
+import DataTable from '@/components/DataTable.vue'
+import jsonData from './mock/res-second-task.json'
 </script>
 
 <template>
-    <DataTable :items="jsonData" />
+  <DataTable :items="jsonData" />
 </template>
-
-<style scoped>
-
-</style>
