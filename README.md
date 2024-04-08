@@ -33,6 +33,7 @@ project, constructive, under_constructive, work_group, block, floor, level
 
 
 Структура таблицы table_first_task и наполнение в файле: table_first_task.sql
+https://github.com/baha96/test-project/blob/51423fea6208f792c39f3576357925c0c14c17dd/server/app.js#L24
 
 2 Сделать на VUE выдачу в раскрывающихся секциях данных из файла JSON.
 Данные имеют иерархическую структуру, где data – данные самого элемента, children-дочерние элементы. Ключами являются названия холдингов, дивизионов, проектов и т.п. см. скрин.
