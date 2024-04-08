@@ -43,3 +43,4 @@ https://github.com/baha96/test-project/blob/51423fea6208f792c39f3576357925c0c14c
 
 Данные находятся в файлах res-second-task.json (полный) res-second-task-small.json (укороченный для отладки).
 Ответы можно либо размещать на гит-хабе и ссылку на репозиторий, либо в файлах, по второму заданию – архив проекта, который можно развернуть и запустить.
+https://github.com/baha96/test-project/blob/c045077fee44904f2208ad27c4cdf0bc7f404949/client/src/App.vue#L3
