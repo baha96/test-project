@@ -24,29 +24,27 @@
   </template>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
-import type { tableItems, tableHeaders, tableSeparator } from '@/types'
 import IconDown from '@/components/icons/IconDown.vue'
 
-const props = defineProps<{
-  data: tableItems | undefined
-  separator: tableSeparator
-  parentName?: string | number | undefined
-  paddingLeft?: number
-  headers: tableHeaders
-}>()
+defineProps({
+    data: Object,
+    separator: String,
+    parentName: String,
+    paddingLeft: Number,
+    headers: Array
+})
 
-const { data, separator } = props
-const isShowed = ref<(string | number)[]>([])
-function toggleDisplay(name: string | number): void {
+const isShowed = ref([])
+function toggleDisplay(name) {
   if (isShowed.value.includes(name)) {
     isShowed.value = isShowed.value.filter((i) => i !== name)
   } else {
     isShowed.value.push(name)
   }
 }
-function isEmptyChildren(items = {}): boolean {
+function isEmptyChildren(items = {}) {
   return !!Object.keys(items).length
 }
 </script>

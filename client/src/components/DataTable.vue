@@ -14,15 +14,14 @@
   </table>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import DataRow from '@/components/DataRow.vue'
-import type { tableItems, tableHeaders, tableSeparator } from '@/types'
 
-defineProps<{
-  items: tableItems
-}>()
-const separator: tableSeparator = '-'
-const headers: tableHeaders = [2020, 2021, 2022, 2023, 2024]
+defineProps({
+    items: Object
+})
+const separator = '-'
+const headers = [2020, 2021, 2022, 2023, 2024]
 </script>
 
 <style>
