@@ -32,11 +32,8 @@ app.get(
         MIN(base_plan_start_date) AS min_base_plan_start_date,
         MAX(base_plan_finish_date) AS max_base_plan_finish_date,
         JSON_AGG(
-            CASE
-                WHEN contractor IS NOT NULL THEN JSON_BUILD_OBJECT('contractor', contractor, 'plan_value', plan_value)
-                ELSE JSON_BUILD_OBJECT('contractor', contractor, 'plan_value', plan_value)
-            END
-            ORDER BY plan_value DESC NULLS LAST
+            JSON_BUILD_OBJECT('contractor', contractor, 'plan_value', plan_value)
+            ORDER BY CASE WHEN contractor IS NOT NULL THEN plan_value END DESC NULLS LAST
         ) AS contractors
     FROM
         table_first_task
